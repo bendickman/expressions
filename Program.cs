@@ -8,7 +8,8 @@ internal partial class Program
 
         sqlFilterBuilder.EqualTo(p => p.LastName, "Jones");
         sqlFilterBuilder.GreaterThan(p => p.Age, 3);
-        sqlFilterBuilder.StartsWith(p => p.FirstName, "F");
+        sqlFilterBuilder.StartsWith(p => p.FirstName, "J");
+        sqlFilterBuilder.In(p => p.FirstName, new List<string> { "Joe", "Jane", "Jim" });
 
         var filter = sqlFilterBuilder.GetFilters();
 

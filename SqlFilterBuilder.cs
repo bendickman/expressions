@@ -15,6 +15,25 @@ public class SqlFilterBuilder<TPerson>
         return this;
     }
 
+    public SqlFilterBuilder<TPerson> In<TValue>(
+        Expression<Func<TPerson, TValue>> field,
+        IEnumerable<TValue>? values)
+    {
+        if (!values?.Any() ?? true)
+        {
+            return this;
+        }
+
+        if (values is IEnumerable<string>)
+        {
+            values = values.Select(v => $"'{v}'").ToList() as IEnumerable<TValue>;
+        }
+
+        _filters.Add($"{GetFieldName(field)} IN({string.Join(",", values!)})");
+
+        return this;
+    }
+
     public SqlFilterBuilder<TPerson> EqualTo<TValue>(
         Expression<Func<TPerson, TValue>> field,
         object value)
