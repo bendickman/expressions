@@ -12,3 +12,4 @@ C:\DevRoot\Expression\obj\Debug\net8.0\refint\Expression.dll
 C:\DevRoot\Expression\obj\Debug\net8.0\Expression.pdb
 C:\DevRoot\Expression\obj\Debug\net8.0\Expression.genruntimeconfig.cache
 C:\DevRoot\Expression\obj\Debug\net8.0\ref\Expression.dll
+C:\DevRoot\Expression\obj\Debug\net8.0\Expression.sourcelink.json

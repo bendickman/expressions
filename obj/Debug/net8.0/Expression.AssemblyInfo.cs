@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Expression")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd1f0244f6be7c2133f71cfaa69bac69423654df")]
 [assembly: System.Reflection.AssemblyProductAttribute("Expression")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Expression")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
