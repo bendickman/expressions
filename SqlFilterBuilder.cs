@@ -8,9 +8,36 @@ public class SqlFilterBuilder<TPerson>
 
     public SqlFilterBuilder<TPerson> GreaterThan<TValue>(
         Expression<Func<TPerson, TValue>> field,
-        object value)
+        int value)
     {
         _filters.Add($"{GetFieldName(field)} > {value}");
+
+        return this;
+    }
+
+    public SqlFilterBuilder<TPerson> GreaterThanOrEqualTo<TValue>(
+        Expression<Func<TPerson, TValue>> field,
+        int value)
+    {
+        _filters.Add($"{GetFieldName(field)} >= {value}");
+
+        return this;
+    }
+
+    public SqlFilterBuilder<TPerson> LessThan<TValue>(
+        Expression<Func<TPerson, TValue>> field,
+        int value)
+    {
+        _filters.Add($"{GetFieldName(field)} < {value}");
+
+        return this;
+    }
+
+    public SqlFilterBuilder<TPerson> LessThanOrEqualTo<TValue>(
+        Expression<Func<TPerson, TValue>> field,
+        int value)
+    {
+        _filters.Add($"{GetFieldName(field)} <= {value}");
 
         return this;
     }
